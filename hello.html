@@ -1,0 +1,32 @@
+<html>
+  <body>
+  	<p id = "quote-and-joke"></p>
+  	<button id = "inspiration"> click here </button>
+  	<button id = "joke"> or here </button>
+  	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  	<script>
+  	  $("#inspiration").click(function () {
+  	  	$.get("./inspiration", function (response) {
+  	  		$("#quote-and-joke").text(response);
+  	  	});
+  	  });
+
+      $("#joke").click(function () {
+  	  	$.get("./joke", function (response) {
+  	  		$("#quote-and-joke").text(response.setup + "  " + response.punchline);
+  	  	});
+  	  });
+
+  	 // $("button").click(function () {
+  	 // 	var url = "./inspiration";
+  	 // 	if ($(this, .attr("id ") === "joke") {
+  	 // 		url = "./joke"
+  	 // 	}
+  	 //  	$.get(url, function (response) {
+  	 //  		$("#quote-and-joke").text(response);
+  	 //  	});
+  	 //  });
+  	</script>
+  	
+  </body>
+</html>

@@ -2,7 +2,7 @@ var express = require("express"),
 	app = express(); 
 
 app.get("/", function (req, res) {
-	res.send("hello universe");
+	res.sendfile("./hello.html");
 });
 
 var inspiration = ["You can do it!", "Mondays, right?", "Greener pastures ahead.", "They're probably just jealous.", "It gets better."]
